@@ -1,0 +1,19 @@
+#!/bin/sh
+# /etc/network/if-up.d/set-metric
+METRIC_VALUE_LAN=300
+METRIC_VALUE_WIFI=200
+
+
+if [ "$IFACE" = "eth0" ]; then
+
+    # Apply the metric value using ifmetric
+    /usr/sbin/ifmetric $IFACE $METRIC_VALUE_LAN
+fi
+
+
+if [ "$IFACE" = "wlan0" ]; then
+
+    /usr/sbin/ifmetric $IFACE $METRIC_VALUE_WIFI
+fi
+
+exit 0
