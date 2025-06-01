@@ -33,7 +33,7 @@ The reason is that each network management systemâ€”ifupdown and NetworkManagerâ
     if [ "$IFACE" = "wlp6s0" ]; then
 
         # Apply the metric value using ifmetric
-        /usr/sbin/ifmetric $IFACE $METRIC_VALUE_LAN
+        /usr/sbin/ifmetric $IFACE $METRIC_VALUE_WIFI
     fi
     ```
     NOTE: You can also changed the applied metric value. Please keep in the mind that the lower the metric the higher the priority of the interface.
