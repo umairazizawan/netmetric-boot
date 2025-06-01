@@ -1,5 +1,5 @@
 #!/bin/sh
-# /etc/network/if-up.d/set-metric
+# /etc/network/if-up.d/apply-metric
 METRIC_VALUE_LAN=300
 METRIC_VALUE_WIFI=200
 
